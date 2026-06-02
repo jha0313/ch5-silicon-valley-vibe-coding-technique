@@ -21,7 +21,10 @@
     {
       "step": 2,
       "name": "openai-service",
-      "status": "pending"
+      "status": "completed",
+      "started_at": "2026-06-02T09:09:52+0900",
+      "completed_at": "2026-06-02T09:13:30+0900",
+      "summary": "src/services/openai.ts: AppError(code/httpStatus) 클래스와 generateThumbnails(finalPrompt/image?/n/size→data URL[]) 구현. 키는 호출 시점 process.env로 읽고 미설정시 MISSING_API_KEY(503), OpenAI는 함수 내부에서만 인스턴스화(최상위 금지). image 유무로 images.edit/generate 분기(model:gpt-image-2), b64_json→data:image/png;base64 매핑·데이터 없으면 GENERATION_FAILED(502). catch에서 모더레이션류→CONTENT_POLICY(422), 그 외→GENERATION_FAILED(502)로 정규화하며 원본 에러 미노출. openai.test.ts 6케이스(SDK vi.mock) 통과, 전체 14 passed, build/lint 통과"
     },
     {
       "step": 3,

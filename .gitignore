@@ -11,3 +11,4 @@ tsconfig.tsbuildinfo
 # phase execution outputs
 phases/**/phase*-output.json
 phases/**/step*-output.json
+.claude/scheduled_tasks.lock
