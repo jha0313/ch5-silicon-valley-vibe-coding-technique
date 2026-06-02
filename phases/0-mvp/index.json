@@ -1,0 +1,35 @@
+{
+  "project": "유튜브 썸네일 생성기",
+  "phase": "0-mvp",
+  "steps": [
+    {
+      "step": 0,
+      "name": "project-setup",
+      "status": "completed",
+      "started_at": "2026-06-02T09:04:12+0900",
+      "completed_at": "2026-06-01T17:07:00+0900",
+      "summary": "Next.js 15.5(App Router,src-dir)+TS strict+Tailwind v4+Vitest 4 scaffolding 완료, alias @→src, openai SDK 설치, vitest.config.ts(node 기본/globals)·.env.local.example·sanity 테스트 생성. build/test/lint 통과"
+    },
+    {
+      "step": 1,
+      "name": "domain",
+      "status": "pending"
+    },
+    {
+      "step": 2,
+      "name": "openai-service",
+      "status": "pending"
+    },
+    {
+      "step": 3,
+      "name": "api-route",
+      "status": "pending"
+    },
+    {
+      "step": 4,
+      "name": "ui",
+      "status": "pending"
+    }
+  ],
+  "created_at": "2026-06-02T09:04:12+0900"
+}
