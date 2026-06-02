@@ -29,7 +29,10 @@
     {
       "step": 3,
       "name": "api-route",
-      "status": "pending"
+      "status": "completed",
+      "started_at": "2026-06-02T09:13:10+0900",
+      "completed_at": "2026-06-02T09:17:40+0900",
+      "summary": "POST /api/generate(app/api/generate/route.ts, runtime=nodejs·maxDuration=60) 구현: formData에서 prompt/caption/n(ALLOWED_N 외엔 DEFAULT_N)/image(File·size>0) 추출, 인라인 검증(prompt 공백→400 INVALID_INPUT, image 타입/크기 위반→400). buildPrompt(preset16x9:true)→generateThumbnails(service 경유, SDK·키 직접 접근 없음)→{images} 200. catch: AppError는 code/message/httpStatus 그대로(CONTENT_POLICY 422·MISSING_API_KEY 503·GENERATION_FAILED 502), 그 외 예외는 502 고정으로 정규화하며 원본 에러 비노출. route.test.ts 8케이스(generateThumbnails vi.mock 부분 모킹, AppError 실제) 통과, 전체 22 passed, build/lint 통과"
     },
     {
       "step": 4,
