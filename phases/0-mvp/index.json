@@ -37,7 +37,10 @@
     {
       "step": 4,
       "name": "ui",
-      "status": "pending"
+      "status": "completed",
+      "started_at": "2026-06-02T09:16:35+0900",
+      "completed_at": "2026-06-02T09:21:40+0900",
+      "summary": "src/components/ThumbnailGenerator.tsx('use client') 단일 컴포넌트로 전체 UI 구현: 상태(prompt/caption/imageFile/n/status/images/error/inlineError) + 4상태머신(idle→loading→success|error). 폼(프롬프트 textarea·문구 input·참고이미지 file+object URL 미리보기/제거·후보수 ALLOWED_N 세그먼트), 클라 검증(타입/크기 위반 시 inlineError·선택취소), onSubmit은 FormData+AbortController(70s)로 /api/generate만 POST(OpenAI 직접호출 없음), res.ok→{images}, !ok→{error}, abort/네트워크→GENERATION_FAILED. loading 스피너·폼 비활성, success 결과그리드+data URL 다운로드(thumbnail-{i+1}.png)+다시생성, error 배너+GENERATION_FAILED만 재시도. page.tsx 셸→<ThumbnailGenerator/>, layout 메타데이터/다크모드 고정. jsdom 스모크 테스트 2케이스(렌더·빈 프롬프트 버튼 비활성) 선작성, 전체 24 passed, build/lint 통과"
     }
   ],
   "created_at": "2026-06-02T09:04:12+0900"
