@@ -13,7 +13,10 @@
     {
       "step": 1,
       "name": "domain",
-      "status": "pending"
+      "status": "completed",
+      "started_at": "2026-06-02T09:08:19+0900",
+      "completed_at": "2026-06-02T17:09:30+0900",
+      "summary": "src/types/thumbnail.ts(ErrorCode·GenerateSuccess/ErrorBody/Response·BuildPromptInput 타입 + THUMBNAIL_SIZE·ALLOWED_N·DEFAULT_N·MAX_IMAGE_BYTES·ACCEPTED_IMAGE_TYPES 상수)와 순수 함수 src/lib/buildPrompt.ts(prompt 항상 포함, preset16x9 기본 true 썸네일 최적화 지시, caption trim 후 비어있지 않을 때만 문구 주입) TDD로 작성. buildPrompt.test.ts 7케이스 + sanity = 8 passed, build/test 통과"
     },
     {
       "step": 2,
